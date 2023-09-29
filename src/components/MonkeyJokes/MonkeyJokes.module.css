@@ -1,0 +1,52 @@
+/* Custom Heading Styles */
+.customHeading {
+  font-size: 24px; /* Set the font size to 24 pixels */
+  color: white; /* Set text color to white */
+  text-transform: uppercase; /* Convert text to uppercase */
+  margin-bottom: 20px; /* Add margin to the bottom (spacing) of 20 pixels */
+}
+
+/* Monkey Image Styles */
+.monkeyImage {
+  width: 100%; /* Set the width of the image to 100% (responsive) */
+  height: 100%; /* Set the height of the image to 100% (responsive) */
+  border-radius: 50%; /* Apply a rounded border with a 50% radius to create a circular image */
+}
+
+/* Monkey Image Styles (with class 'monkey-image') */
+.monkey-image {
+  border: 10px solid #17a2b8; /* Add a 10-pixel solid border around the image container with a blue color (#17a2b8) */
+  border-radius: 10px; /* Apply a rounded border with a 10-pixel radius */
+  padding: 3px; /* Add 3 pixels of padding within the border */
+  margin-bottom: 20px; /* Add margin to the bottom (spacing) of 20 pixels */
+  max-width: 100%; /* Set the maximum width of the image to 100% (responsive) */
+}
+
+/* Custom Paragraph Styles */
+.customParagraph {
+  font-size: 18px; /* Set the font size to 18 pixels */
+  color: #fff; /* Set text color to white */
+  margin-bottom: 20px; /* Add margin to the bottom (spacing) of 20 pixels */
+}
+
+/* Button Hover Styles (with class 'customBtn') */
+.customBtn:hover {
+  background-color: #31d2f2; /* Change the background color to a light blue (#31d2f2) on hover */
+  color: #000; /* Change the text color to black (#000) on hover */
+  border-color: #25cff2; /* Change the border color to a lighter blue (#25cff2) on hover */
+}
+/*
+Explanation of CSS Properties:
+- font-size: Sets the size of the text.
+- color: Defines the text color.
+- text-transform: Converts text to uppercase.
+- margin-bottom: Adds spacing at the bottom.
+- width and height: Sets the dimensions of the image.
+- border-radius: Creates rounded corners for elements.
+- border: Defines the border properties.
+- padding: Adds spacing within an element.
+- max-width: Sets the maximum width of an element.
+- background-color: Sets the background color.
+- hover: Indicates styles applied on hover.
+These CSS properties are used to style various elements within the component, such as headings, images, paragraphs, and buttons, to achieve the desired visual presentation and interactivity.
+*/

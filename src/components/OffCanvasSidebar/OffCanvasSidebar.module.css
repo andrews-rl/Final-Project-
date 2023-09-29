@@ -1,0 +1,107 @@
+/* Set styles for the Offcanvas component */
+.offcanvas {
+  width: 250px;                  /* Set the width to 250 pixels */
+  background-color: #17a2b8;     /* Set the background color to a teal shade */
+}
+
+/* Set styles for the body section inside the Offcanvas component */
+.offcanvas-body {
+  padding: 0;                    /* Remove all padding */
+  background: #17a2b8;           /* Set the background color to the same teal shade */
+}
+
+/* Remove list styling for a class named .list-unstyled */
+.list-unstyled {
+  list-style-type: none;         /* Remove bullet points from the list */
+  padding: 0;                    /* Remove padding */
+}
+
+/* Set styles for each list item within .list-unstyled */
+.list-unstyled li {
+  margin: 0;                     /* Remove margin */
+  padding: 10px 20px;            /* Add padding of 10px vertical and 20px horizontal */
+  border-bottom: 1px solid #ccc; /* Add a light gray border at the bottom of each item */
+}
+
+/* Remove the bottom border for the last list item within .list-unstyled */
+.list-unstyled li:last-child {
+  border-bottom: none;           /* Remove bottom border */
+}
+
+/* Style for accordion items */
+.accordion-item {
+  background-color: transparent; /* Set background to transparent */
+}
+
+/* Set text color for expanded accordion buttons */
+.accordion-button:not(.collapsed) {
+  color: #17a2b8;                /* Set color to teal when the accordion is expanded */
+}
+
+/* Set styles for anchor tags within accordion bodies */
+.accordion-body a {
+  text-decoration: none;         /* Remove underline from the text */
+  color: #17a2b8;                /* Set the text color to teal */
+  display: block;                /* Make each link a block element */
+  padding: 5px 0;                /* Add vertical padding */
+}
+
+/* Add underline to anchor tags within accordion bodies on hover */
+.accordion-body a:hover {
+  text-decoration: underline;    /* Add underline on hover */
+}
+
+/* Category-specific background colors */
+.category-header--JavaScript { background-color: #98ff98; color: #fff; }
+.category-header--Java { background-color: #87CEEB; color: #fff; }
+.category-header--Python { background-color: #FA8072; color: #fff; }
+.category-header--SQL { background-color: #F08080; color: #fff; }
+.category-header--InformationTechnology { background-color: #9370DB; color: #fff; }
+
+/* Set color for the menu title */
+.menu-title {
+  color: rgb(28, 42, 192);       /* Set the color to a shade of blue */
+}
+
+/* Ensure the link color doesn't change on various states */
+.noColorChange:visited,
+.noColorChange:active,
+.noColorChange:hover,
+.noColorChange:focus {
+  color: #17a2b8 !important;     /* Force the color to remain teal in all states */
+}
+
+/* 1. padding: 0;
+The padding property is a shorthand for setting the padding values for all four sides of an element. When you set it to 0, it means there is no padding on any side of the element (top, right, bottom, left).
+
+2. padding: 10px 20px;
+In this shorthand version, the first value 10px sets the padding for the top and bottom, and the second value 20px sets the padding for the left and right. This is equivalent to:
+
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+
+3. color: #17a2b8;
+The color property sets the text color. It's a shorthand because it sets the color for various textual elements within the targeted element, such as the main text, underlines, etc. The value #17a2b8 is a hexadecimal representation of the color.
+
+4. background-color: #17a2b8;
+This is a shorthand property for setting only the background color of an element. When you have complex background settings like an image overlaying a color, this property only changes the color.
+
+5. border-bottom: 1px solid #ccc;
+The border-bottom property is shorthand for setting all the bottom border properties (width, style, color) in a single declaration. 1px is the width, solid is the style, and #ccc is the color.
+
+6. width: 250px;
+The width property sets the width of an element. Though not a shorthand in the strictest sense, it does influence other layout settings like margins and positioning.
+
+7. margin: 0;
+The margin property is a shorthand for setting the margins on all four sides of an element. When you set it to 0, it means no margins are applied.
+
+8. margin: 0 auto;
+In this shorthand version, the first value 0 sets the margin for the top and bottom, and auto sets the left and right margins automatically, centering the block horizontally.
+
+9. color: #fff;
+Just like the color property mentioned earlier, this sets the text color. The shorthand value #fff is a hexadecimal representation for white.
+
+10. color: rgb(28, 42, 192);
+Another format for the color property, using the RGB color model. */

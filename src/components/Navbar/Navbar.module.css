@@ -1,0 +1,81 @@
+/* Styles the navigation bar container */
+.navBar {
+  background-color: #343a40;  /* Sets the background color */
+  padding: 20px 0;  /* Adds padding to the top and bottom */
+  text-align: center;  /* Centers the text */
+  color: black;  /* Sets the text color */
+  border-bottom-left-radius: 10px;  /* Rounds the bottom left corner */
+  border-bottom-right-radius: 10px;  /* Rounds the bottom right corner */
+}
+
+/* Defines the navigation bar list */
+.navList {
+  list-style-type: none;  /* Removes the list bullets */
+  padding: 0;  /* Removes padding */
+  margin: 0 auto;  /* Centers the list horizontally */
+}
+
+/* Defines each list item in the navigation bar */
+.navItem {
+  display: inline;  /* Makes the list items inline */
+  margin-right: 5px;  /* Adds a right margin for spacing */
+  color: white;  /* Sets the text color */
+  font-size: 22px;  /* Sets the font size */
+}
+
+/* Styles the navigation links */
+.navLink {
+  text-decoration: none;  /* Removes the underline */
+  color: black;  /* Sets the text color */
+  font-size: 22px;  /* Sets the font size */
+}
+
+/* Another class for styling navigation links */
+.navLink2 {
+  font-size: 22px;  /* Sets the font size */
+}
+
+/* Styles the dropdown button */
+.dropdownButton {
+  background-color: #343a40;  /* Sets the background color */
+  border: none;  /* Removes the border */
+  color: white;  /* Sets the text color */
+  font-size: 22px;  /* Sets the font size */
+  cursor: pointer;  /* Changes the cursor to a pointer on hover */
+}
+
+/* Styles the dropdown items */
+.dropdownItem {
+  color: black;  /* Sets the text color */
+}
+
+/* .navBar
+background-color: #343a40;: This sets the background color of the navigation bar container to a dark gray shade (#343a40).
+padding: 20px 0;: This sets the padding for the top and bottom of the element to 20 pixels, and left and right to 0. Padding is the space between the content and the border of the element.
+text-align: center;: This centers the text horizontally within the element.
+color: black;: This sets the default text color within the .navBar to black.
+border-bottom-left-radius: 10px;: This rounds the bottom-left corner of the element with a radius of 10 pixels.
+border-bottom-right-radius: 10px;: Similar to above, this rounds the bottom-right corner of the element with a radius of 10 pixels.
+.navList
+list-style-type: none;: This removes the default list markers (like bullets for unordered lists).
+padding: 0;: This sets the padding to zero, removing any default padding that may be applied by the browser.
+margin: 0 auto;: This sets the top and bottom margins to zero and automatically sets left and right margins, effectively centering the element.
+.navItem
+display: inline;: This makes the list items display inline, so they sit next to each other horizontally.
+margin-right: 5px;: This adds a margin of 5 pixels to the right of each list item, providing space between them.
+color: white;: This sets the text color of the list items to white.
+font-size: 22px;: This sets the font size of the text to 22 pixels.
+.navLink
+text-decoration: none;: This removes the default underline that is usually applied to anchor tags.
+color: black;: This sets the text color to black.
+font-size: 22px;: This sets the font size to 22 pixels.
+.navLink2
+font-size: 22px;: This also sets the font size to 22 pixels, just like .navLink.
+.dropdownButton
+background-color: #343a40;: This sets the background color to a dark gray shade, similar to .navBar.
+border: none;: This removes any default border styling.
+color: white;: This sets the text color to white.
+font-size: 22px;: This sets the font size to 22 pixels.
+cursor: pointer;: This changes the mouse cursor to a pointer when hovering over the element, indicating clickability.
+.dropdownItem
+color: black;: This sets the text color of the dropdown items to black. */

@@ -1,0 +1,16 @@
+/* Week6.css */
+.heart {
+  color: red; /* Red color for hearts */
+}
+
+.diamond {
+  color: red; /* Red color for diamonds */
+}
+
+.spade {
+  color: black; /* Black color for spades */
+}
+
+.club {
+  color: black; /* Black color for clubs */
+}

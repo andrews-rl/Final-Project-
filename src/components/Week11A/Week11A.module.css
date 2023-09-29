@@ -1,0 +1,92 @@
+/* Elements Used in the Code:
+   - <nav>: Represents the navigation bar container.
+   - <div>: Used for grouping and structuring content.
+   - <Link>: Provided by React Router, creates navigation links.
+   - <DropdownButton>: A Bootstrap component for a dropdown button.
+   - <Dropdown.Item>: A Bootstrap component for dropdown items.
+   - <button>: A standard HTML button element.
+*/
+
+/* CSS Modules Classes Used in the Code:
+   - styles.navBar: Applies styling to the navigation bar.
+   - styles.navList: Styles for the list within the navigation bar.
+   - styles.navItem: Styles for individual navigation items.
+   - styles.navLink: Styles for navigation links.
+   - styles.dropdownButton: Styles for the Bootstrap dropdown button.
+   - styles.dropdownItem: Styles for individual dropdown items.
+*/
+
+/* Bootstrap Classes (Modifiers) Used in the Code:
+   - text-white: Sets the text color to white.
+   - variant="info": Sets the Bootstrap variant to 'info,' changing the button color.
+*/
+
+/* Additional CSS Classes Used in the Code:
+   - d-flex: Sets the element as a flex container, allowing flexible layout.
+   - align-items-center: Aligns flex items vertically at the center of the container.
+   - justify-content-between: Distributes space evenly between flex items horizontally,
+     pushing them to the edges of the container.
+*/
+
+/* Set margins and text alignment for elements with the 'text-info' and 'text-center' classes */
+.text-info.text-center {
+  margin: 0;
+}
+
+/* Style for the main container */
+.container {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+}
+
+/* Style for the 'title' class */
+.title {
+  margin-top: -20px;
+  background-color: transparent;
+}
+
+/* Style for the game board */
+.gameBoard {
+  width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  justify-content: center;
+  background-color: transparent;
+}
+
+/* Style for the 'status' class */
+.status {
+  color: #17a2b8;
+  font-size: 24px;
+  text-align: center;
+  /* Note: The 'color' property is defined twice; the second one overrides the first. */
+  color: white;
+}
+
+/* Style for the game boxes */
+.box {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: #17a2b8;
+  background-color: transparent;
+  font-size: 72px;
+  border: 4px solid #17a2b8;
+}
+
+/* Remove the right border for every third box */
+.box:nth-child(3n) {
+  border-right: none;
+}
+
+/* Remove the bottom border for boxes after every sixth box */
+.box:nth-child(6n) ~ .box {
+  border-bottom: none;
+}

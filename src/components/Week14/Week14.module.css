@@ -1,0 +1,39 @@
+/* Week14.module.css */
+.week14Container {
+  text-align: center;
+}
+
+.week14Title {
+  margin-bottom: 20px;
+}
+
+.movieCard {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.reviewList {
+  margin-top: 20px;
+}
+
+.reviewList h4 {
+  margin-bottom: 10px;
+}
+
+.reviewList ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.reviewList li {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.reviewList strong {
+  font-weight: bold;
+}

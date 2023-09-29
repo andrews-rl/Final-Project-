@@ -1,0 +1,73 @@
+/* .crudContainer class for styling the container that holds CRUD operations */
+.crudContainer {
+  max-width: 98%; /* Sets the maximum width to 98% of the parent container */
+  margin-top: 20px; /* Adds 20 pixels of space above the container */
+  margin-left: auto; /* Centers the container horizontally by setting auto margins */
+  margin-right: auto; /* Centers the container horizontally by setting auto margins */
+  padding: 10px; /* Adds 10 pixels of padding inside the container */
+}
+
+/* .mjContainer class for styling the container that holds MonkeyJokes component */
+.mjContainer {
+  max-width: 98%; /* Sets the maximum width to 98% of the parent container */
+  height: 500px; /* Sets the height to 500 pixels */
+  margin-top: 20px; /* Adds 20 pixels of space above the container */
+  margin-left: auto; /* Centers the container horizontally by setting auto margins */
+  margin-right: auto; /* Centers the container horizontally by setting auto margins */
+  padding: 10px; /* Adds 10 pixels of padding inside the container */
+  border: 8px solid white; /* Adds an 8-pixel solid white border around the container */
+  border-radius: 10px; /* Rounds the corners of the border with a 10-pixel radius */
+  background-color: #343a40; /* Sets the background color to a dark gray */
+  color: white; /* Sets the text color to white */
+  justify-content: center; /* Center the content horizontally */
+}
+
+/* .themeContainer class for styling the container that holds different weekly themes */
+.themeContainer {
+  max-width: 98%; /* Sets the maximum width to 98% of the parent container */
+  height: auto; /* Sets the height to auto, allowing it to grow with content */
+  margin-top: 20px; /* Adds 20 pixels of space above the container */
+  margin-left: auto; /* Centers the container horizontally by setting auto margins */
+  margin-right: auto; /* Centers the container horizontally by setting auto margins */
+  padding: 10px; /* Adds 10 pixels of padding inside the container */
+  border: 8px solid white; /* Adds an 8-pixel solid white border around the container */
+  border-radius: 10px; /* Rounds the corners of the border with a 10-pixel radius */
+  background-color: #343a40; /* Sets the background color to a dark gray */
+  color: white; /* Sets the text color to white */
+  justify-content: center; /* Center the content horizontally */
+}
+
+/* .WelcomeSection class for styling the container that holds the Welcome component */
+.WelcomeSection {
+  max-width: 98%; /* Sets the maximum width to 98% of the parent container */
+  margin-top: 40px; /* Adds 40 pixels of space above the container */
+  margin-left: auto; /* Centers the container horizontally by setting auto margins */
+  margin-right: auto; /* Centers the container horizontally by setting auto margins */
+  padding: 10px; /* Adds 10 pixels of padding inside the container */
+  border: 8px solid white; /* Adds an 8-pixel solid white border around the container */
+  border-radius: 10px; /* Rounds the corners of the border with a 10-pixel radius */
+  background-color: #343a40; /* Sets the background color to a dark gray */
+  color: white; /* Sets the text color to white */
+  text-align: center; /* Center the text horizontally */
+}
+/* max-width: Sets the maximum width of the container to a percentage of its parent container. The container will not exceed this width.
+
+margin-top: Adds a top margin to the container, measured in pixels.
+
+margin-left, margin-right: Using "auto" for these properties centers the container horizontally within its parent container.
+
+padding: Adds padding to all sides of the container, providing space between the border and the content inside the container.
+
+height: Sets the height of the container. When set to "auto," it allows the container to grow based on its content.
+
+border: Sets the border style, width, and color around the container.
+
+border-radius: Rounds the corners of the border, measured in pixels.
+
+background-color: Sets the background color of the container.
+
+color: Sets the text color inside the container.
+
+justify-content: Used in a flexbox layout to align and distribute space among items in a container. When set to "center," it centers the items horizontally.
+
+text-align: Aligns the inline content like text horizontally within an element. When set to "center," it centers the text. */
