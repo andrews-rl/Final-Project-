@@ -1,11 +1,22 @@
 /* .crudContainer class for styling the container that holds CRUD operations */
 .crudContainer {
-  max-width: 98%; /* Sets the maximum width to 98% of the parent container */
-  margin-top: 20px; /* Adds 20 pixels of space above the container */
+  background-color: #343a40; /* Sets the background color to a dark gray */
+  border: 8px solid white; /* Adds an 8-pixel solid white border around the container */
+  border-radius: 10px; /* Rounds the corners of the border with a 10-pixel radius */
+  color: white; /* Sets the text color to white */
+  height: auto; /* Sets the height to auto, allowing it to grow with content */
+  justify-content: center; /* Center the content horizontally */
   margin-left: auto; /* Centers the container horizontally by setting auto margins */
   margin-right: auto; /* Centers the container horizontally by setting auto margins */
+  margin-top: 20px; /* Adds 20 pixels of space above the container */
+  max-height: calc(100%); /* Allows the container to expand its height based on content */
+  max-width: 98%; /* Sets the maximum width to 98% of the parent container */
+  /* min-height: 125px; Sets a minimum height of 100px */
   padding: 10px; /* Adds 10 pixels of padding inside the container */
 }
+
+
+
 
 /* .mjContainer class for styling the container that holds MonkeyJokes component */
 .mjContainer {
@@ -15,7 +26,7 @@
   margin-left: auto; /* Centers the container horizontally by setting auto margins */
   margin-right: auto; /* Centers the container horizontally by setting auto margins */
   padding: 10px; /* Adds 10 pixels of padding inside the container */
-  border: 8px solid white; /* Adds an 8-pixel solid white border around the container */
+  border: 10px solid white; /* Adds an 8-pixel solid white border around the container */
   border-radius: 10px; /* Rounds the corners of the border with a 10-pixel radius */
   background-color: #343a40; /* Sets the background color to a dark gray */
   color: white; /* Sets the text color to white */

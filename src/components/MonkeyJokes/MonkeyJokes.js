@@ -28,13 +28,13 @@ function MonkeyJokes() {
   return (
     <div className={styles.container}>
       {/* Styling with CSS Modules: Render a styled container for the component using CSS classes imported from 'MonkeyJokes.module.css'. */}
-      <h2 className={`${styles.customHeading} ${styles.textCenter}`}>Jokes</h2>
+      <h4 className={`display-6 mt-3 ${styles.customHeading} ${styles.textCenter}`}>Jokes</h4>
       {/* Displaying Content: Display a title with custom styles that aligns to the center. */}
       <div className={`${styles.monkeyImageContainer} ${styles.textCenter}`}>
         <img
           src={monkeyImage}
           alt="Prophet Monkey"
-          className={`${styles['monkey-image']} img-fluid rounded`}
+          className={`border border-5 border-info ${styles['monkey-image']} img-fluid rounded`}
         />
       </div>
       {/* Render an image of "Prophet Monkey" with custom styling that includes rounded corners and responsiveness. */}
@@ -43,7 +43,7 @@ function MonkeyJokes() {
       </div>
       {/* Display the fetched joke with custom paragraph styles and white text color. */}
       <div className={`${styles.textCenter}`}>
-        <button className="btn btn-info" onClick={fetchAnotherJoke}>
+        <button className="btn btn-info text-dark border-5 border-white custom-button" onClick={fetchAnotherJoke}>
           Another Joke
         </button>
       </div>

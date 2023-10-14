@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 
+// Define a class-based component named Week5
 class Week5 extends Component {
   constructor(props) {
     super(props);
-    // Initialize state
+    // Initialize component state to manage data
     this.state = {
-      movies: [],
-      selectedMovieIndex: null,
-      newMovieName: '',
-      newCharacterName: '',
-      newCharacterType: 'Hero',
+      movies: [],                   // Array to store movie data
+      selectedMovieIndex: null,    // Index of the selected movie
+      newMovieName: '',            // Name of a new movie
+      newCharacterName: '',        // Name of a new character
+      newCharacterType: 'Hero',    // Type of a new character (default: Hero)
     };
   }
 
@@ -19,7 +20,7 @@ class Week5 extends Component {
     if (newMovieName) {
       this.setState((prevState) => ({
         movies: [...prevState.movies, { name: newMovieName, characters: [] }],
-        newMovieName: '',
+        newMovieName: '',  // Clear the input field after creating the movie
       }));
     }
   }
@@ -33,7 +34,7 @@ class Week5 extends Component {
         name: newCharacterName,
         type: newCharacterType,
       });
-      this.setState({ movies: updatedMovies, newCharacterName: '' });
+      this.setState({ movies: updatedMovies, newCharacterName: '' }); // Clear the input field after creating the character
     }
   }
 
@@ -59,7 +60,7 @@ class Week5 extends Component {
     }
   }
 
-  // Render function
+  // Render function to render the component's UI
   render() {
     const {
       movies,
@@ -72,10 +73,10 @@ class Week5 extends Component {
     return (
       <div className="container">
         <hr />
-        <h3 className="text-info text-center mt-3">Week 5: Object Oriented Programming</h3>
+        <h3 className="text-center display-6">Movie Menu Object Oriented Programming</h3>
         <hr />
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-4 mt-4 d-flex justify-content-center align-items-center">
             <form>
               <div className="mb-3">
                 <input
@@ -85,7 +86,7 @@ class Week5 extends Component {
                   onChange={(e) => this.setState({ newMovieName: e.target.value })}
                   className="form-control mb-2"
                 />
-                <button type="button" onClick={() => this.createMovie()} className="btn btn-info d-block mx-auto mt-4">Create New Movie</button>
+                <button type="button" onClick={() => this.createMovie()} className="btn btn btn-info text-dark border-5 border-white custom-button">New Movie</button>
               </div>
               {selectedMovieIndex !== null && (
                 <div className="mb-3">
@@ -100,7 +101,7 @@ class Week5 extends Component {
                     <option value="Hero">Hero</option>
                     <option value="Villain">Villain</option>
                   </select>
-                  <button type="button" onClick={() => this.createCharacter()} className="btn btn-info d-block mx-auto">Create New Character</button>
+                  <button type="button" onClick={() => this.createCharacter()} className="btn btn-info text-dark border-5 border-white custom-button">New Character</button>
                 </div>
               )}
             </form>
@@ -114,8 +115,8 @@ class Week5 extends Component {
             {movies.map((movie, index) => (
               <div key={index} className="mt-3">
                 <p className="text-info">{index}) {movie.name}</p>
-                <button type="button" onClick={() => this.viewMovie(index)} className="btn btn-info me-2">Characters</button>
-                <button type="button" onClick={() => this.deleteMovie(index)} className="btn btn-info">Delete Movie</button>
+                <button type="button" onClick={() => this.viewMovie(index)} className="btn btn-info text-dark border-5 border-white custom-button me-3">Characters</button>
+                <button type="button" onClick={() => this.deleteMovie(index)} className="btn btn-info text-dark border-5 border-white custom-button">Delete Movie</button>
                 {selectedMovieIndex === index && (
                   <div className="mt-3">
                     {movie.characters.length > 0 ? (
@@ -124,7 +125,7 @@ class Week5 extends Component {
                         {movie.characters.map((character, characterIndex) => (
                           <div key={characterIndex} className="mb-2 d-flex justify-content-between align-items-center">
                             <span>{characterIndex}) {character.name} ({character.type})</span>
-                            <button type="button" onClick={() => this.deleteCharacter(characterIndex)} className="btn btn-info">Delete Character</button>
+                            <button type="button" onClick={() => this.deleteCharacter(characterIndex)} className="btn btn-info text-dark border-5 border-white custom-button">Del Character</button>
                           </div>
                         ))}
                       </div>
@@ -142,7 +143,8 @@ class Week5 extends Component {
   }
 }
 
-export default Week5;
+export default Week5; // Export the Week5 component for use in other parts of the application
+
 // Elements used in the code:
 // <div>: Used for grouping and structuring content.
 // <form>: Represents the container for all form elements.

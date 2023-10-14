@@ -120,7 +120,7 @@ function Week11A() {
   return (
     <div className="container">
       <hr />
-      <h3 className="text-info text-center">Week 11: Tic Tac Toe</h3>
+      <h3 className="text-center display-6">Tic Tac Toe</h3>
       <hr />
 
       <div className="d-flex justify-content-center align-items-center">
@@ -147,7 +147,7 @@ function Week11A() {
                   <div className="row">
                     <div className="col text-center">
                       <button
-                        className={`btn btn-info mt-5 mb-5`}
+                        className={`btn btn-info text-dark border-5 border-white custom-button mt-5 mb-5`}
                         onClick={resetBoard}
                       >
                         <span className={`text-dark`}>Play Again</span>
@@ -159,7 +159,7 @@ function Week11A() {
             ) : (
               <div className="row">
                 <div className="col text-center ">
-                  <button className={`btn btn-info  `} onClick={resetBoard}>
+                  <button className={`btn btn-info text-dark border-5 border-white custom-button mt-5 mb-5`} onClick={resetBoard}>
                     Play Game
                   </button>
                 </div>

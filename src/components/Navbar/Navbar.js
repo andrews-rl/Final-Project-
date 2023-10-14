@@ -34,7 +34,7 @@ function Navbar() {
         </div>
         <div className={`m-3 ${styles.navItem}`}>
           {/* Create a Bootstrap dropdown button with a custom variant and label */}
-          <DropdownButton title="More" variant="info" className={`text-white ${styles.dropdownButton}`}>
+          <DropdownButton title="More" variant="info" className={` ${styles.dropdownButton}`}>
             {navItems.map((item, index) => (
               // Map through 'navItems' to create dropdown items as links with custom styling
               <Dropdown.Item key={index} as={Link} to={item.path} className={`${styles.dropdownItem}`}>

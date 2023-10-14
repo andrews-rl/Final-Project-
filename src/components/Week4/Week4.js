@@ -7,10 +7,10 @@ function Week4() {
   return (
     // Main container div
     <div className="container">
-      {/* Horizontal rule */}
+      {/* Horizontal rule - Makes a horrizontal line*/}
       <hr/>
       {/* Title of the page */}
-      <h3 className="text-center text-info">Week 4: ECMAScript 6 & Intermediate JavaScript</h3>
+      <h3 className="text-center display-6">ECMA Script 6 & Intermediate JavaScript</h3>
       {/* Another horizontal rule */}
       <hr/>
 

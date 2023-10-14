@@ -39,6 +39,7 @@ import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 function Week11() {
+  // State to track whether code has been copied to clipboard
   const [copiedCode, setCopiedCode] = useState(null);
 
   const indexHtmlCode = `<!DOCTYPE html>
@@ -72,6 +73,7 @@ function Week11() {
 </body>
 </html>`;
 
+  // JavaScript code stored as a string
   const indexJsCode = `let nameStatus = document.getElementById("nameStatus");
 let restartButton = document.getElementById("restartBtn");
 let boxes = Array.from(document.getElementsByClassName("box"));
@@ -136,7 +138,7 @@ function playerWon() {
 }
 
 startGame();`;
-
+  // CSS code stored as a string
   const stylesCssCode = `* {
   padding: 0;
   margin: 0;
@@ -220,7 +222,7 @@ button:hover {
   transform: translateY(-2px);
 }
 `;
-
+  // Function to copy code to clipboard
   const copyCodeToClipboard = (code) => {
     navigator.clipboard.writeText(code).then(() => {
       setCopiedCode(code);
@@ -231,17 +233,17 @@ button:hover {
   return (
     <div className="container">
       <hr />
-      <h3 className="text-info text-center mt-3">Week 11: JQuery & AJAX</h3>
+      <h3 className="text-center display-6">JQuery & AJAX</h3>
       <hr />
       <div className="row justify-content-around">
         <div className="col-auto">
-          <button className="btn btn-info" onClick={() => copyCodeToClipboard(indexHtmlCode)}>Copy index.html</button>
+          <button className="btn btn-info text-dark border-5 border-white custom-button" onClick={() => copyCodeToClipboard(indexHtmlCode)}>HTML</button>
         </div>
         <div className="col-auto">
-          <button className="btn btn-info" onClick={() => copyCodeToClipboard(indexJsCode)}>Copy index.js</button>
+          <button className="btn btn-info text-dark border-5 border-white custom-button" onClick={() => copyCodeToClipboard(indexJsCode)}>JavaScript</button>
         </div>
         <div className="col-auto">
-          <button className="btn btn-info" onClick={() => copyCodeToClipboard(stylesCssCode)}>Copy styles.css</button>
+          <button className="btn btn-info text-dark border-5 border-white custom-button" onClick={() => copyCodeToClipboard(stylesCssCode)}>CSS</button>
         </div>
       </div>
 
@@ -252,7 +254,9 @@ button:hover {
       <hr />
 
       <div className="code-snippet">
-        <h4>index.html</h4>
+        <div class="text-info d-flex align-items-center justify-content-center">
+          <p className="fs-3">Hypertext Markup Language</p>
+        </div>
         <SyntaxHighlighter language="html" style={docco}>
           {indexHtmlCode}
         </SyntaxHighlighter>
@@ -261,7 +265,10 @@ button:hover {
       <hr />
 
       <div className="code-snippet">
-        <h4>index.js</h4>
+        <div class="text-info d-flex align-items-center justify-content-center">
+          <p className="fs-3">JavaScript</p>
+        </div>
+
         <SyntaxHighlighter language="javascript" style={docco}>
           {indexJsCode}
         </SyntaxHighlighter>
@@ -270,7 +277,9 @@ button:hover {
       <hr />
 
       <div className="code-snippet">
-        <h4>styles.css</h4>
+      <div class="text-info d-flex align-items-center justify-content-center">
+          <p className="fs-3">Cascading Style Sheet</p>
+      </div>
         <SyntaxHighlighter language="css" style={docco}>
           {stylesCssCode}
         </SyntaxHighlighter>

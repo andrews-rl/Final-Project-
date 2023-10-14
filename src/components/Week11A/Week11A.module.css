@@ -1,34 +1,24 @@
-/* Elements Used in the Code:
-   - <nav>: Represents the navigation bar container.
-   - <div>: Used for grouping and structuring content.
-   - <Link>: Provided by React Router, creates navigation links.
-   - <DropdownButton>: A Bootstrap component for a dropdown button.
-   - <Dropdown.Item>: A Bootstrap component for dropdown items.
-   - <button>: A standard HTML button element.
-*/
+/* 
 
-/* CSS Modules Classes Used in the Code:
-   - styles.navBar: Applies styling to the navigation bar.
-   - styles.navList: Styles for the list within the navigation bar.
-   - styles.navItem: Styles for individual navigation items.
-   - styles.navLink: Styles for navigation links.
-   - styles.dropdownButton: Styles for the Bootstrap dropdown button.
-   - styles.dropdownItem: Styles for individual dropdown items.
-*/
+.text-info.text-center: This rule applies styles to elements with both the 'text-info' and 'text-center' classes. It sets the margin to 0, effectively removing any margins.
 
-/* Bootstrap Classes (Modifiers) Used in the Code:
-   - text-white: Sets the text color to white.
-   - variant="info": Sets the Bootstrap variant to 'info,' changing the button color.
-*/
+.container: This rule styles the main container element. It adds padding (top, right, bottom, left: 40px), sets it as a flex container with a column direction, aligns items in the center, and makes the background transparent.
 
-/* Additional CSS Classes Used in the Code:
-   - d-flex: Sets the element as a flex container, allowing flexible layout.
-   - align-items-center: Aligns flex items vertically at the center of the container.
-   - justify-content-between: Distributes space evenly between flex items horizontally,
-     pushing them to the edges of the container.
-*/
+.title: This rule styles elements with the 'title' class. It adjusts the margin (margin-top: -20px) to move the title up and makes the background transparent.
+
+.gameBoard: This rule styles the game board element. It sets its width to 450px, displays it as a flex container with wrap, centers it horizontally, adds margin at the top (margin-top: 40px), and makes the background transparent.
+
+.status: This rule styles elements with the 'status' class. It sets the color to #17a2b8, font size to 24px, and text-align to center. Note that the 'color' property is defined twice, with the second one (color: white) overriding the first.
+
+.box: This rule styles game boxes. It sets their width and height to 150px, makes them flex containers with center alignment, sets the text color to #17a2b8, font size to 72px, and adds a 4px solid border with the color #17a2b8. The background color is transparent.
+
+.box:nth-child(3n): This rule targets every third box and removes the right border, creating a visual pattern.
+
+.box:nth-child(6n) ~ .box: This rule targets boxes after every sixth box and removes the bottom border, creating another visual pattern. */
 
 /* Set margins and text alignment for elements with the 'text-info' and 'text-center' classes */
+
+
 .text-info.text-center {
   margin: 0;
 }

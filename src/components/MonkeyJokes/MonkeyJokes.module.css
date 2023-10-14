@@ -1,8 +1,8 @@
 /* Custom Heading Styles */
 .customHeading {
-  font-size: 24px; /* Set the font size to 24 pixels */
+
   color: white; /* Set text color to white */
-  text-transform: uppercase; /* Convert text to uppercase */
+
   margin-bottom: 20px; /* Add margin to the bottom (spacing) of 20 pixels */
 }
 
@@ -15,7 +15,7 @@
 
 /* Monkey Image Styles (with class 'monkey-image') */
 .monkey-image {
-  border: 10px solid #17a2b8; /* Add a 10-pixel solid border around the image container with a blue color (#17a2b8) */
+  /* border: 10px solid #17a2b8; Add a 10-pixel solid border around the image container with a blue color (#17a2b8) */
   border-radius: 10px; /* Apply a rounded border with a 10-pixel radius */
   padding: 3px; /* Add 3 pixels of padding within the border */
   margin-bottom: 20px; /* Add margin to the bottom (spacing) of 20 pixels */

@@ -127,18 +127,18 @@ function Week7() {
   return (
     <div className="container">
       <hr />
-      <h3 className="text-info text-center mt-3">Week 7: HTML</h3>
+      <h3 className="text-center display-6">Hypertext Markup Language</h3>
       <hr />
       {/* Button group for copying HTML code */}
       <div className="row justify-content-around">
         <div className="col-auto">
-          <button className="btn btn-info" onClick={() => copyCodeToClipboard(homeHtmlCode)}>Copy Home Page</button>
+          <button className="btn btn-info text-dark border-5 border-white custom-button" onClick={() => copyCodeToClipboard(homeHtmlCode)}>Home</button>
         </div>
         <div className="col-auto">
-          <button className="btn btn-info" onClick={() => copyCodeToClipboard(aboutHtmlCode)}>Copy About Page</button>
+          <button className="btn btn-info text-dark border-5 border-white custom-button" onClick={() => copyCodeToClipboard(aboutHtmlCode)}>About</button>
         </div>
         <div className="col-auto">
-          <button className="btn btn-info" onClick={() => copyCodeToClipboard(contactHtmlCode)}>Copy Contact Page</button>
+          <button className="btn btn-info text-dark border-5 border-white custom-button" onClick={() => copyCodeToClipboard(contactHtmlCode)}>Contact</button>
         </div>
       </div>
       {/* Alert message when code is copied */}
@@ -148,21 +148,27 @@ function Week7() {
       <hr />
       {/* Syntax-highlighted code snippets */}
       <div className="code-snippet">
-        <h4>home.html</h4>
+        <div class="text-info d-flex align-items-center justify-content-center">
+          <p className="fs-3">Home</p>
+        </div>
         <SyntaxHighlighter language="html" style={docco}>
           {homeHtmlCode}
         </SyntaxHighlighter>
       </div>
       <hr />
       <div className="code-snippet">
-        <h4>about.html</h4>
+        <div class="text-info d-flex align-items-center justify-content-center">
+          <p className="fs-3">About</p>
+        </div>
         <SyntaxHighlighter language="html" style={docco}>
           {aboutHtmlCode}
         </SyntaxHighlighter>
       </div>
       <hr />
       <div className="code-snippet">
-        <h4>contact.html</h4>
+      <div class="text-info d-flex align-items-center justify-content-center">
+          <p className="fs-3">Contact</p>
+        </div>
         <SyntaxHighlighter language="html" style={docco}>
           {contactHtmlCode}
         </SyntaxHighlighter>

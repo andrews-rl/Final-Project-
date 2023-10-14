@@ -85,9 +85,12 @@ function Week8() {
     padding: 2%;
   }`;
 
+   // CSS code stored as a string
   const cssPropertiesReport = (
     <div>
-      <h3 className="text-info">CSS Properties</h3>
+      <div class="d-flex align-items-center justify-content-center">
+        <h3 className="text-info fs-3">CSS Properties</h3>
+      </div>    
       <hr />
       <h4 className="text-info">Box Model and Sizing Properties</h4>
       <ul className="list-unstyled text-white">
@@ -169,6 +172,7 @@ function Week8() {
     </div>
   );
 
+  // Function to copy code to clipboard
   const copyCodeToClipboard = (code) => {
     navigator.clipboard.writeText(code).then(() => {
       setCopiedCode(code);
@@ -179,14 +183,14 @@ function Week8() {
   return (
     <div className="container">
       <hr />
-      <h3 className="text-info text-center mt-3">Week 8: CSS</h3>
+      <h3 className="text-center display-6">Cascading Style Sheets</h3>
       <hr />
-      <div className="row justify-content-center">
-        <div className="col-auto">
-          <button className="btn btn-info" onClick={() => copyCodeToClipboard(cssCode)}>Copy CSS Code</button>
+      <div className="row justify-content-between">
+        <div className="col-auto mx-auto">
+          <button className="btn btn-info text-dark border-5 border-white custom-button" onClick={() => copyCodeToClipboard(cssCode)}>CSS</button>
         </div>
-        <div className="col-auto">
-          <button className="btn btn-info" onClick={() => copyCodeToClipboard(cssPropertiesReport)}>Copy CSS Properties</button>
+        <div className="col-auto mx-auto">
+          <button className="btn btn-info text-dark border-5 border-white custom-button" onClick={() => copyCodeToClipboard(cssPropertiesReport)}>Properties</button>
         </div>
       </div>
 
@@ -196,8 +200,11 @@ function Week8() {
 
       <hr />
 
+      {/* Display the CSS code with syntax highlighting */}
       <div className="code-snippet">
-        <h4>styles.css</h4>
+        <div class="text-info d-flex align-items-center justify-content-center">
+          <p className="fs-3">Cascading Style Sheet</p>
+        </div>
         <SyntaxHighlighter language="css" style={docco}>
           {cssCode}
         </SyntaxHighlighter>
@@ -205,6 +212,7 @@ function Week8() {
 
       <hr />
 
+      {/* Display the CSS properties report */}
       <div className="code-snippet">
         {cssPropertiesReport}
       </div>

@@ -36,15 +36,16 @@
 // Week 12's code represents a functional CRUD application that manages contact information. It demonstrates the integration of React, jQuery, and Bootstrap to create an interactive and visually appealing web application. The code is organized and includes comments for clarity, making it a valuable learning resource for web development.
 
 // Import necessary modules and components from React and external libraries
-import React, { useState } from 'react';
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import React, { useState } from 'react'; // Import 'useState' hook from React
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';  // Import 'SyntaxHighlighter' component from 'react-syntax-highlighter'
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';  // Import 'docco' style from 'react-syntax-highlighter'
 
 // Define the Week12 functional component
 function Week12() {
   // Initialize state variable 'copiedCode' using the 'useState' hook
   const [copiedCode, setCopiedCode] = useState(null);
 
+  // HTML code stored as a string
   const htmlCode = `
     <!DOCTYPE html>
     <html lang="en">
@@ -104,6 +105,7 @@ function Week12() {
     </html>
   `;
 
+  // JavaScript code stored as a string
   const jsCode = `
     $(function () {
       function fetchAndDisplayData() {
@@ -242,6 +244,7 @@ function Week12() {
     });
   `;
 
+  // CSS code stored as a string
   const cssCode = `
     .container {
       margin-top: 20px;
@@ -305,7 +308,7 @@ function Week12() {
       width: 152px;
     }
   `;
-
+  // Function to copy code to clipboard
   const copyCodeToClipboard = (code) => {
     navigator.clipboard.writeText(code).then(() => {
       setCopiedCode(code);
@@ -317,21 +320,21 @@ function Week12() {
     <div className="container">
       <hr />
       {/* Header */}
-      <h3 className="text-info text-center mt-3">Week 12: CRUD</h3>
+      <h3 className="text-center display-6">Creat Read Update and Delete</h3>
       <hr />
       {/* Buttons for Copying Code */}
       <div className="row justify-content-around">
         <div className="col-auto">
           {/* Button to Copy HTML Code */}
-          <button className="btn btn-info" onClick={() => copyCodeToClipboard(htmlCode)}>Copy HTML</button>
+          <button className="btn btn-info text-dark border-5 border-white custom-button" onClick={() => copyCodeToClipboard(htmlCode)}>HTML</button>
         </div>
         <div className="col-auto">
           {/* Button to Copy JavaScript Code */}
-          <button className="btn btn-info" onClick={() => copyCodeToClipboard(jsCode)}>Copy JavaScript</button>
+          <button className="btn btn-info text-dark border-5 border-white custom-button" onClick={() => copyCodeToClipboard(jsCode)}>JavaScript</button>
         </div>
         <div className="col-auto">
           {/* Button to Copy CSS Code */}
-          <button className="btn btn-info" onClick={() => copyCodeToClipboard(cssCode)}>Copy CSS</button>
+          <button className="btn btn-info text-dark border-5 border-white custom-button" onClick={() => copyCodeToClipboard(cssCode)}>CSS</button>
         </div>
       </div>
 
@@ -344,7 +347,9 @@ function Week12() {
 
       {/* HTML Code Snippet */}
       <div className="code-snippet">
-        <h4>HTML</h4>
+        <div class="text-info d-flex align-items-center justify-content-center">
+          <p className="fs-3">Hypertext Markup Language</p>
+        </div>
         <SyntaxHighlighter language="html" style={docco}>
           {htmlCode}
         </SyntaxHighlighter>
@@ -354,7 +359,9 @@ function Week12() {
 
       {/* JavaScript Code Snippet */}
       <div className="code-snippet">
-        <h4>JavaScript</h4>
+        <div class="text-info d-flex align-items-center justify-content-center">
+          <p className="fs-3">JavaScript</p>
+        </div>
         <SyntaxHighlighter language="javascript" style={docco}>
           {jsCode}
         </SyntaxHighlighter>
@@ -364,7 +371,9 @@ function Week12() {
 
       {/* CSS Code Snippet */}
       <div className="code-snippet">
-        <h4>CSS</h4>
+        <div class="text-info d-flex align-items-center justify-content-center">
+          <p className="fs-3">Cascading Style Sheet</p>
+        </div>
         <SyntaxHighlighter language="css" style={docco}>
           {cssCode}
         </SyntaxHighlighter>
@@ -373,4 +382,4 @@ function Week12() {
   );
 }
 
-export default Week12;
+export default Week12;  // Export the Week12 component

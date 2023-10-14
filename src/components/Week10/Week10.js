@@ -74,6 +74,7 @@ import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function Week10() {
   const [copiedCode, setCopiedCode] = useState(null);
 
+  // HTML code stored as a string
   const employeeHtmlCode = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -121,6 +122,7 @@ function Week10() {
 </body>
 </html>`;
 
+  // JavaScript code stored as a string
   const indexJsCode = `// JavaScript code for index.js
 document.addEventListener('DOMContentLoaded', () => {
   const employeeForm = document.getElementById('employee-form');
@@ -148,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
     zipCodeInput.value = '';
   });
 });`;
-
+  // Function to copy code to clipboard
   const copyCodeToClipboard = (code) => {
     navigator.clipboard.writeText(code).then(() => {
       setCopiedCode(code);
@@ -159,25 +161,25 @@ document.addEventListener('DOMContentLoaded', () => {
   return (
     <div className="container">
       <hr />
-      <h3 className="text-info text-center mt-3">Week 10: JavaScript & DOM Manipulation</h3>
+      <h3 className="text-center display-6">JavaScript & DOM Manipulation</h3>
       <hr />
       <div className="row justify-content-around">
         <div className="col-auto">
-          <button className="btn btn-info" onClick={() => copyCodeToClipboard(employeeHtmlCode)}>Copy index.html</button>
+          <button className="btn btn-info text-dark border-5 border-white custom-button" onClick={() => copyCodeToClipboard(employeeHtmlCode)}>HTML</button>
         </div>
         <div className="col-auto">
-          <button className="btn btn-info" onClick={() => copyCodeToClipboard(indexJsCode)}>Copy index.js</button>
+          <button className="btn btn-info text-dark border-5 border-white custom-button" onClick={() => copyCodeToClipboard(indexJsCode)}>JavaScript</button>
         </div>
       </div>
-
       {copiedCode && (
         <div className="alert alert-success mt-3">Code copied to clipboard!</div>
       )}
-
       <hr />
 
       <div className="code-snippet">
-        <h4>index.html</h4>
+        <div class="text-info d-flex align-items-center justify-content-center">
+          <p className="fs-3">Hypertext Markup Language</p>
+        </div>
         <SyntaxHighlighter language="html" style={docco}>
           {employeeHtmlCode}
         </SyntaxHighlighter>
@@ -186,7 +188,9 @@ document.addEventListener('DOMContentLoaded', () => {
       <hr />
 
       <div className="code-snippet">
-        <h4>index.js</h4>
+        <div class="text-info d-flex align-items-center justify-content-center">
+          <p className="fs-3">JavaScript</p>
+        </div>    
         <SyntaxHighlighter language="javascript" style={docco}>
           {indexJsCode}
         </SyntaxHighlighter>

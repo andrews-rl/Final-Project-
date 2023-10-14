@@ -130,6 +130,7 @@ function Week9() {
     </html>
   `;
 
+   // Function to copy code to clipboard
   const copyCodeToClipboard = (code) => {
     navigator.clipboard.writeText(code).then(() => {
       setCopiedCode(code);
@@ -140,17 +141,17 @@ function Week9() {
   return (
     <div className="container">
       <hr />
-      <h3 className="text-info text-center mt-3">Week 9: Bootstrap</h3>
+      <h3 className="text-center display-6"> Bootstrap</h3>
       <hr />
       <div className="row justify-content-around">
         <div className="col-auto">
-          <button className="btn btn-info" onClick={() => copyCodeToClipboard(homeHtmlCode)}>Copy Home Page</button>
+          <button className="btn btn-info text-dark border-5 border-white custom-button" onClick={() => copyCodeToClipboard(homeHtmlCode)}>Home</button>
         </div>
         <div className="col-auto">
-          <button className="btn btn-info" onClick={() => copyCodeToClipboard(aboutHtmlCode)}>Copy About Page</button>
+          <button className="btn btn-info text-dark border-5 border-white custom-button" onClick={() => copyCodeToClipboard(aboutHtmlCode)}> About</button>
         </div>
         <div className="col-auto">
-          <button className="btn btn-info" onClick={() => copyCodeToClipboard(contactHtmlCode)}>Copy Contact Page</button>
+          <button className="btn btn-info text-dark border-5 border-white custom-button" onClick={() => copyCodeToClipboard(contactHtmlCode)}>Contact</button>
         </div>
       </div>
 
@@ -161,7 +162,9 @@ function Week9() {
       <hr />
 
       <div className="code-snippet">
-        <h4>Home Page</h4>
+        <div class="text-info d-flex align-items-center justify-content-center">
+          <p className="fs-3">Home</p>
+        </div>
         <SyntaxHighlighter language="html" style={docco}>
           {homeHtmlCode}
         </SyntaxHighlighter>
@@ -170,7 +173,9 @@ function Week9() {
       <hr />
 
       <div className="code-snippet">
-        <h4>About Page</h4>
+        <div class="text-info d-flex align-items-center justify-content-center">
+          <p className="fs-3">About</p>
+        </div>
         <SyntaxHighlighter language="html" style={docco}>
           {aboutHtmlCode}
         </SyntaxHighlighter>
@@ -179,7 +184,9 @@ function Week9() {
       <hr />
 
       <div className="code-snippet">
-        <h4>Contact Page</h4>
+        <div class="text-info d-flex align-items-center justify-content-center">
+          <p className="fs-3">Contact</p>
+        </div>
         <SyntaxHighlighter language="html" style={docco}>
           {contactHtmlCode}
         </SyntaxHighlighter>

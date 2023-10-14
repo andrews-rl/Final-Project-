@@ -1,10 +1,10 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif; /* Change the font-family to Arial */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, sans-serif; /* Sets the font family for the entire body content to Arial or a sans-serif font if Arial is unavailable. */
+  -webkit-font-smoothing: antialiased; /* Ensures that fonts appear clear and legible on macOS devices. */
+  -moz-osx-font-smoothing: grayscale;/* Ensures that fonts appear clear and legible on macOS devices. */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;  /* Sets the font family for code snippets to a monospace font. */
 }

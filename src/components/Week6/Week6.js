@@ -113,24 +113,24 @@ class Week6 extends Component {
     return (
       <div className="container text-center">
         <hr />
-        <h3 className="text-info text-center mt-3">Week 6: DevTools, Debugging, & Unit Tests</h3>
+        <h3 className="text-center display-6">DevTools, Debugging, & Unit Tests</h3>
         <hr />
-        <button onClick={this.playGame} className="btn btn-info">
-          {gameStarted ? 'Play Again' : 'Start Game'}  // Button text based on game state
+        <button onClick={this.playGame} className="btn btn-info text-dark border-5 border-white custom-button">
+          {gameStarted ? 'Play Again' : 'Start Game'}  
         </button>
         <hr />
         {gameStarted && (  // Conditional rendering based on game state
           <div>
-            <hr />
+            
             {rounds.map((round) => (  // Loop through each round to display details
               <div key={round.roundNumber} className="row mt-3">
                 <div className="col">
                   <p>
-                    Round {round.roundNumber}:  // Display round number
+                    Round {round.roundNumber}:  
                   </p>
                 </div>
                 <div className="col">
-                  <span style={{ fontSize: '24px' }}>  // Display player 1's card
+                  <span style={{ fontSize: '24px' }}>  
                     {round.player1Card.includes('♥') || round.player1Card.includes('♦') ? (
                       <span style={{ color: 'red' }}>{round.player1Card}</span>
                     ) : (
@@ -138,10 +138,10 @@ class Week6 extends Component {
                     )}
                   </span>
                 </div>
-                <div className="col">  // vs separator
+                <div className="col">  
                   vs
                 </div>
-                <div className="col">  // Display player 2's card
+                <div className="col">  
                   <span style={{ fontSize: '24px' }}>
                     {round.player2Card.includes('♥') || round.player2Card.includes('♦') ? (
                       <span style={{ color: 'red' }}>{round.player2Card}</span>
@@ -150,15 +150,15 @@ class Week6 extends Component {
                     )}
                   </span>
                 </div>
-                <div className="col">  // Display winner label
+                <div className="col">  
                   Winner:
                 </div>
-                <div className="col">  // Display round winner
+                <div className="col">  
                   {round.winner === 'Player 1' ? 'Player 1' : round.winner === 'Player 2' ? 'Player 2' : 'Tie'}
                 </div>
               </div>
             ))}
-            <div className="mt-3">  // Display game results
+            <div className="mt-3"> 
               <h5 className="text-info" style={{ fontSize: '24px' }}>
                 Results:
               </h5>

@@ -1,6 +1,27 @@
+/* CSS Styles for Body */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif; /* Sets the font family for the entire body content to Arial or a sans-serif font if Arial is unavailable. */
 }
+
+/* CSS Styles for Full Height */
 .fullHeight {
-  min-height: 100vh;
+  min-height: 100vh; /* Ensures that the element with the 'fullHeight' class occupies at least 100% of the viewport height, making it fill the entire screen vertically. */
 }
+
+/* CSS Styles for Custom Buttons */
+.custom-button {
+  width: 138px !important; /* Sets a fixed width of 138 pixels for elements with the 'custom-button' class, ensuring consistent button size. The '!important' rule gives this style precedence over other conflicting styles. */
+}
+
+
+/* The !important declaration in CSS is used to give a CSS rule higher specificity and, as a result, greater precedence or importance over other conflicting CSS rules that might target the same element. When a style rule includes !important, it overrides any other conflicting styles applied to the same element, even if those styles have higher specificity or are defined later in the stylesheet.
+
+Here's why you might use !important and its purpose:
+
+Override Specificity: CSS styles are normally applied based on specificity and the order in which they appear in the stylesheet. However, there may be cases where you want to ensure that a particular style takes precedence, regardless of specificity. !important allows you to do this.
+
+External Stylesheets: When working with external stylesheets, you might encounter situations where you cannot easily modify the original stylesheet, but you need to override specific styles for a particular element. In such cases, you can use !important to forcefully apply your desired style.
+
+Third-Party Styles: When using third-party libraries or plugins that include their own CSS styles, you may want to customize certain aspects of their styles. !important can help you make these customizations without modifying the library's source code.
+
+However, it's important to use !important judiciously and as a last resort. Overusing !important can lead to increased complexity and make styles harder to maintain because it overrides the natural cascading behavior of CSS. It's generally better to rely on specificity and the order of styles in your stylesheet for most cases and use !important sparingly when you need to ensure a specific style takes precedence. */

@@ -1,12 +1,15 @@
 import React from 'react';
 
+// Define a functional component named Week3
 function Week3() {
   return (
     <div className="container">
       <hr />
-      <h3 className="text-center text-info">Week 3: GitHub Zoom & YouTube</h3>
+      <h3 className="text-center display-6">GitHub Zoom & YouTube</h3>
       <hr />
       <div className="mx-auto text-left">
+
+        {/* Section: Creating a New GitHub Repository */}
         <h4 className="text-info">Creating a New GitHub Repository</h4>
         <ol className="text-white">
           <li>First, sign into your GitHub account or create a new one if you don't have one yet.</li>
@@ -16,7 +19,8 @@ function Week3() {
           <li>Click "Create repository" to finalize it.</li>
         </ol>
         <hr />
-        
+
+        {/* Section: Adding and Managing Code through Git */}
         <h4 className="text-info">Adding and Managing Code through Git</h4>
         <ol className="text-white">
           <li>Open your computer's terminal and navigate to the folder where you want your project to be.</li>
@@ -24,7 +28,8 @@ function Week3() {
           <li>After cloning, any changes you make to these files can be tracked using Git.</li>
         </ol>
         <hr />
-        
+
+        {/* Section: Creating a Video in Zoom */}
         <h4 className="text-info">Creating a Video in Zoom</h4>
         <ol className="text-white">
           <li>Download and install Zoom, and then open it.</li>
@@ -32,7 +37,8 @@ function Week3() {
           <li>When you're done, click "Stop Recording" and then end the meeting.</li>
         </ol>
         <hr />
-        
+
+        {/* Section: Uploading the Video to YouTube */}
         <h4 className="text-info">Uploading the Video to YouTube</h4>
         <ol className="text-white">
           <li>Sign in to YouTube and go to YouTube Studio.</li>
@@ -46,7 +52,8 @@ function Week3() {
   );
 }
 
-export default Week3;
+export default Week3; // Export the Week3 component for use in other parts of the application
+
 
 // Elements used in the code
 // div: This HTML element is commonly used for grouping and structuring content.

@@ -1,75 +1,68 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import styles from './Routes.module.css';
-import Create from '../Create/Create';
-import Read from '../Read/Read';
-import Update from '../Update/Update';
-import Delete from '../Delete/Delete';
-import Welcome from '../Welcome/Welcome';
-import MonkeyJokes from '../MonkeyJokes/MonkeyJokes';
-import Week3 from '../Week3/Week3';
-import Week4 from '../Week4/Week4';
-import Week5 from '../Week5/Week5';
-import Week6 from '../Week6/Week6';
-import Week7 from '../Week7/Week7';
-import Week8 from '../Week8/Week8';
-import Week9 from '../Week9/Week9';
-import Week9A from '../Week9A/Week9A';
-import Week10 from '../Week10/Week10';
-import Week11 from '../Week11/Week11';
-import Week11A from '../Week11A/Week11A';
-import Week12 from '../Week12/Week12';
-import Week14 from '../Week14/Week14';
+import React from 'react'; // Import React library
+import { Routes, Route } from 'react-router-dom'; // Import necessary components from 'react-router-dom'
+import styles from './Routes.module.css'; // Import CSS styles for this component
+import Welcome from '../Welcome/Welcome'; // Import the Welcome component
+import MonkeyJokes from '../MonkeyJokes/MonkeyJokes'; // Import the MonkeyJokes component
+import Week3 from '../Week3/Week3'; // Import Week3 component
+import Week4 from '../Week4/Week4'; // Import Week4 component
+import Week5 from '../Week5/Week5'; // Import Week5 component
+import Week6 from '../Week6/Week6'; // Import Week6 component
+import Week7 from '../Week7/Week7'; // Import Week7 component
+import Week8 from '../Week8/Week8'; // Import Week8 component
+import Week9 from '../Week9/Week9'; // Import Week9 component
+import Week9A from '../Week9A/Week9A'; // Import Week9A component
+import Week10 from '../Week10/Week10'; // Import Week10 component
+import Week11 from '../Week11/Week11'; // Import Week11 component
+import Week11A from '../Week11A/Week11A'; // Import Week11A component
+import Week12 from '../Week12/Week12'; // Import Week12 component
+import Week14 from '../Week14/Week14'; // Import Week14 component
+import CRUD from '../Crud/Crud'; // Import the CRUD component
 
-
+// A component that represents a row in the CRUD section
 const CrudRow = ({ data, setSelectedId }) => (
-  <div className={`bg-info container ${styles.crudContainer}`}>
-    <div className="row">
-      <div className={`col-md-3 mb-3 ${styles.themeContainer}`}>
+  <div>
+    <div>
+      <div className={`col-md-12 mb-3 ${styles.crudContainer}`}>
         <div className="container">
-          <Create />
-        </div>
-      </div>
-      <div className={`col-md-3 mb-3 ${styles.themeContainer}`}>
-        <div className="container">
-          <Read data={data} setSelectedId={setSelectedId} />
-        </div>
-      </div>
-      <div className={`col-md-3 mb-3 ${styles.themeContainer}`}>
-        <div className="container">
-          <Update />
-        </div>
-      </div>
-      <div className={`col-md-3 mb-3 ${styles.themeContainer}`}>
-        <div className="container">
-          <Delete />
+          <CRUD /> {/* Display the CRUD component here */}
         </div>
       </div>
     </div>
   </div>
 );
 
+// A component representing the home page section
 const HomePageElement = ({ data, setSelectedId }) => (
   <>
     <div className={styles.WelcomeSection}>
       <Welcome />
     </div>
-    <CrudRow data={data} setSelectedId={setSelectedId} />
+
+    <div className={`custom-form mt-4`}>
+      <CrudRow data={data} setSelectedId={setSelectedId} />
+    </div>
+
     <div className={`${styles.mjContainer} d-flex align-items-center text-center mt-4`}>
       <MonkeyJokes />
     </div>
   </>
 );
 
+// The main component that defines the routes for the application
 const CustomRoutes = ({ data, setSelectedId }) => (
   <Routes>
+    <Route path='/crud' element={<CRUD />} />
     <Route path="/" element={<HomePageElement data={data} setSelectedId={setSelectedId} />} />
     <Route path="/home" element={<HomePageElement data={data} setSelectedId={setSelectedId} />} />
     <Route path="/javascript" element={
+
+      // This route displays various components related to JavaScript
       <div>
-        <CrudRow data={data} setSelectedId={setSelectedId} />
+        <div className={`custom-form mt-4`}>
+          <CrudRow data={data} setSelectedId={setSelectedId} />
+        </div>
         <div className={`${styles.mjContainer} d-flex align-items-center text-center mt-4`}>
-          <MonkeyJokes />              
+          <MonkeyJokes />
         </div>
         <div className={`${styles.themeContainer} custom-form mt-4`}><Week3 /></div>
         <div className={`${styles.themeContainer} custom-form mt-4`}><Week4 /></div>
@@ -96,45 +89,41 @@ const CustomRoutes = ({ data, setSelectedId }) => (
 
 export default CustomRoutes;
 
+// Summary of Code:
+// This code defines a React functional component named 'CustomRoutes' that sets up routing for a web application. It uses the React Router library to manage different routes and display corresponding components. Additionally, it integrates various components like 'Welcome,' 'MonkeyJokes,' and 'Week' components to render content on different pages.
 
 // Elements used in the code:
-// <div>: Used for grouping and structuring content.
-// <Routes>, <Route>: Components provided by React Router for route definition and rendering.
-// <CrudRow>: A custom component to render CRUD operations.
-// <HomePageElement>: A custom component to render the home page.
-// Custom Components:
-// Create, Read, Update, Delete: Components for CRUD operations.
-// Welcome: A component to display welcome message.
-// MonkeyJokes: A component to display jokes.
-// Week3 to Week14: Components corresponding to various weeks.
-// CSS Module Classes:
-// styles.crudContainer: Styles the container for CRUD operations.
-// styles.themeContainer: Styles individual theme containers.
-// styles.WelcomeSection: Styles the welcome section.
-// styles.mjContainer: Styles the MonkeyJokes component container.
-// Bootstrap Classes (Modifiers) used in the code:
-// bg-info: Sets the background color to Bootstrap's "info" color.
-// container: A Bootstrap class for setting max-width and responsive padding to a container.
-// row: A Bootstrap class for rows in a grid system.
-// col-md-3: Sets the column width to 3 when the screen is medium or larger.
-// mb-3: Adds bottom margin to the element.
-// d-flex: Sets the element as a flex container.
-// align-items-center: Aligns flex items vertically at the center of the container.
-// text-center: Sets text alignment to center.
-// mt-4: Adds top margin to the element.
+// - <Routes>: Represents the container for defining routes in React Router.
+// - <Route>: Defines individual routes within the 'Routes' component.
+// - <div>: Used for structuring and grouping content.
+// - <HomePageElement>: A custom component that represents the homepage section.
+// - <CrudRow>: A custom component that represents a row in the CRUD section.
+// - <CRUD>: A custom component responsible for CRUD operations.
+// - <MonkeyJokes>: A custom component for displaying jokes.
+// - Various other custom components for different weeks.
+
+// CSS Modules classes used in the code:
+// - styles.WelcomeSection: Applies styling to the Welcome section.
+// - styles.crudContainer: Styles for the CRUD container.
+// - styles.custom-form: Styles for custom forms.
+// - styles.mjContainer: Styles for the MonkeyJokes container.
+// - styles.themeContainer: Styles for various theme containers.
+
 // Detailed Description:
-// This code defines a React functional component named CustomRoutes, which serves as the routing configuration for a web application. The component imports necessary modules, including React, React Router, and various custom components for CRUD operations and weekly tasks.
+// The 'CustomRoutes' component serves as the main routing component for the web application. It leverages React Router to define different routes and specifies which components to render for each route.
 
-// The CrudRow component is a functional component that houses the four CRUD operation components (Create, Read, Update, Delete) in a row. It is styled using both CSS modules and Bootstrap classes.
+// The code begins with importing necessary libraries and custom components required for the application. These include 'Welcome,' 'MonkeyJokes,' and various 'Week' components that likely contain content related to specific weeks of a course.
 
-// The HomePageElement component is another functional component that renders the Welcome component, the CrudRow component, and the MonkeyJokes component. It's structured to appear on the home page of the application.
+// Inside 'CustomRoutes,' we define multiple routes using the '<Route>' component from React Router. Each route is associated with a specific path and renders a particular component. For example, the '/crud' path renders the 'CRUD' component, the '/' and '/home' paths render the 'HomePageElement' component, and the '/javascript' path renders a complex structure with multiple components.
 
-// Within the CustomRoutes component, the <Routes> component from React Router is used to define the application's routing logic. Various <Route> components are nested inside it to specify what components should be rendered at different paths.
+// The 'HomePageElement' component represents the homepage section of the application. It includes the 'Welcome' component, 'CrudRow' component, and 'MonkeyJokes' component, arranged using custom CSS Modules classes for styling.
 
-// The HomePageElement component is used for the root path ("/") and the "/home" path. For the "/javascript" path, multiple weekly components are rendered along with CrudRow and MonkeyJokes.
+// The 'CrudRow' component represents a row in the CRUD section and includes the 'CRUD' component.
 
-// Additional routes for "/java", "/python", "/SQL", and "/infotech" are defined to render the MonkeyJokes component with a category passed as a prop.
+// The '/javascript' path represents a section of the application related to JavaScript. It includes multiple components, including 'CrudRow,' 'MonkeyJokes,' and various 'Week' components, each enclosed within custom CSS Modules containers.
 
-// A catch-all route is also defined at the end to display a "404 Not Found" message for undefined routes.
+// The other routes, such as '/java,' '/python,' and '/SQL,' render the 'MonkeyJokes' component with different categories, likely displaying jokes related to those categories.
 
-// In summary, the CustomRoutes component is a central hub for routing in the application. It leverages React Router for routing, and Bootstrap and CSS Modules for styling. This ensures a well-structured and styled web application, enhancing the overall user experience.
+// Finally, there is a fallback route ('*') that renders a "404 Not Found" message if none of the defined routes match the URL.
+
+// In summary, 'CustomRoutes' defines routing for a web application, rendering different components for specific paths. It uses React Router for routing and custom CSS Modules for styling, providing a structured and dynamic user experience.

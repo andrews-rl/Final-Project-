@@ -5,7 +5,7 @@ import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function Week9A() {
   // State to track whether code is copied to clipboard
   const [copiedCode, setCopiedCode] = useState(null);
-// Define the content of the Bootstrap CSS properties report
+  // Define the content of the Bootstrap CSS properties report
   const bootstrapCssPropertiesReport = (
     <div>
 
@@ -340,14 +340,14 @@ function Week9A() {
   return (
     <div className="container">
       <hr />
-      <h3 className="text-info text-center">Week 9: Bootstrap CSS Properties</h3>
+      <h3 className="text-center display-6">Bootstrap CSS Properties</h3>
       
       <div className="row justify-content-center">
         <hr />
         <div className="col-auto">
           
-          <button className="btn btn-info mb-3" onClick=  {copyCodeToClipboard}>
-          Copy Code
+          <button className="btn btn-info text-dark border-5 border-white custom-button mb-3" onClick=  {copyCodeToClipboard}>
+          Properties
           </button>
           
         </div>

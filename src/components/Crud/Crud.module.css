@@ -1,0 +1,41 @@
+/* Set styles for elements with the class 'dataTable' */
+.dataTable {
+  width: 100%;
+}
+
+/* Set styles for elements with the class 'alert' */
+.alert {
+  width: 100%;
+}
+
+/* Override background color for elements with the class 'dataTable' */
+.dataTable {
+  background-color: transparent !important;
+}
+
+/* Set white font color for table content */
+.table thead th,
+.table tbody td {
+  color: white;
+}
+
+/* Set white font color for table header background */
+.table thead {
+  background-color: blue;
+}
+
+
+
+/* Additional Comments and Explanations:
+
+The inputField, dataTable, and alert classes are defined with width: 100%; to make these elements span the full width of their containers. This is commonly used for responsive design.
+
+border-radius: 10px; in the .inputField class gives input fields rounded corners. This improves their visual appearance.
+
+The rule .dataTable { background-color: transparent !important; } is used to set the background color of elements with the class 'dataTable' to transparent. The !important keyword ensures this rule takes precedence over other conflicting styles.
+
+The .table thead th, .table tbody td selector targets both table header cells (th) and table data cells (td) within elements with the class 'table' and sets their text color to white.
+
+Finally, .table thead targets the table header (thead) within elements with the class 'table' and sets its background color to blue, likely resulting in a blue background for the table header cells.
+
+These comments provide explanations for each section of the CSS code and its purpose in styling different elements on a web page. */
